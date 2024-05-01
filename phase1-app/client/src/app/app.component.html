@@ -1,0 +1,13 @@
+<main class="main">
+  <div class="flex-container">
+    <form
+      #transactionForm="ngForm"
+      class="form"
+      (ngSubmit)="sendTransaction(transactionForm)"
+    >
+      <label for="">message <span class="required">*</span></label>
+      <input type="text" name="message" ngModel required />
+      <button type="submit">submit</button>
+    </form>
+  </div>
+</main>

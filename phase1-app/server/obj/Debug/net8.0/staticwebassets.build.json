@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ccp2MIt20ZjZpN2Rn2Sb6lOPLczOB+IOANOjdMhDMCg=",
+  "Source": "dotnet-phase1-app",
+  "BasePath": "_content/dotnet-phase1-app",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
