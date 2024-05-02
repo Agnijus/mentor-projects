@@ -31,16 +31,16 @@
 .form span {
   color: red;
 }
-.form input {
-  user-select: none;
-  height: 30px;
+.form textarea {
   border: none;
   border-radius: 0.25rem;
-  padding-left: 0.5rem;
+  padding: 0.5rem;
   background-color: #f1f5f9;
+  resize: none;
 }
-.form input:focus {
+.form textarea:focus {
   outline: none;
+  user-select: none;
 }
 .form button {
   margin-top: 1rem;

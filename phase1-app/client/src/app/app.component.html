@@ -6,7 +6,15 @@
       (ngSubmit)="sendTransaction(transactionForm)"
     >
       <label for="">message <span class="required">*</span></label>
-      <input type="text" name="message" ngModel required />
+      <textarea
+        rows="4"
+        minlength="1"
+        maxlength="50"
+        type="text"
+        name="message"
+        ngModel
+        required
+      ></textarea>
       <button type="submit">submit</button>
     </form>
   </div>

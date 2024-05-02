@@ -12,7 +12,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   title: string = 'Angular-Phase1';
-  transaction: any;
+  //transaction :any;
+  //alerts: Alert[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -27,8 +28,15 @@ export class AppComponent implements OnInit {
       this.http
         .post('http://localhost:5000/api/transaction', transaction)
         .subscribe({
-          next: (response) => console.log(response),
-          error: (error) => console.log(error),
+          next: (response) => {
+            const res = response as Response;
+
+            if (res.statusCode == 200) {
+              console.log(res);
+              form.reset();
+            }
+          },
+          error: (error) => console.log(error.message),
         });
     }
   }
@@ -36,4 +44,10 @@ export class AppComponent implements OnInit {
 
 interface Transaction {
   message: string;
+}
+
+interface Response {
+  isSuccess: boolean;
+  statusCode: number;
+  text: string;
 }

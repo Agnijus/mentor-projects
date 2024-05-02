@@ -30,7 +30,7 @@ namespace dotnet_phase1_app.Controllers
             try
             {
                 var Transaction = await _transactionRepository.InsertTransaction(transaction);
-                return CreatedAtAction(nameof(CreateTransaction), Transaction, new { id = Transaction.Id });
+                return CreatedAtAction(nameof(CreateTransaction), Transaction, new {statusCode = 200, text = "Got It", isSuccess = true  });
 
 
             }
