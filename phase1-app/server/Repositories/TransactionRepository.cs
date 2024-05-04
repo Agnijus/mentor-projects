@@ -12,7 +12,7 @@ namespace dotnet_phase1_app.Repositories
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection") + ";TrustServerCertificate=True";
         }
-        public async Task<Transaction> InsertTransaction(Transaction transaction)
+        public async Task<Transaction> InsertTransaction(string message)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString)) 
             {
@@ -22,14 +22,18 @@ namespace dotnet_phase1_app.Repositories
 
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("@Message", transaction.Message);
+                    cmd.Parameters.AddWithValue("@Message", message);
                     cmd.Parameters.AddWithValue("@Date", DateTime.Now);
 
                     var id = (decimal)await cmd.ExecuteScalarAsync();
 
-                    transaction.Id = (int)id;
 
-                    return transaction;
+                    return new Transaction
+                    {
+                        Id = (int)id,
+                        Message = message,
+                        Date = DateTime.Now
+                    };
                 }
             }
         }

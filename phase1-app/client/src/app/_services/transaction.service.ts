@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -10,11 +10,9 @@ export class TransactionService {
   constructor(private http: HttpClient) {}
 
   sendTransaction(message: string) {
-    const transaction: Transaction = {
-      message: message,
-    };
+    const params = new HttpParams().set('message', message);
 
-    this.http.post(this.baseUrl + '/transaction', transaction).subscribe({
+    this.http.get(this.baseUrl + '/transaction', { params }).subscribe({
       next: (response) => {
         const res = response as Response;
 
@@ -28,11 +26,10 @@ export class TransactionService {
   }
 }
 
-interface Transaction {
-  message: string;
-}
-
 interface Response {
+  id: number;
+  message: string;
+  date: Date;
   isSuccess: boolean;
   statusCode: number;
   text: string;

@@ -4,6 +4,6 @@ namespace dotnet_phase1_app.Repositories
 {
     public interface ITransactionRepository
     {
-        Task<Transaction> InsertTransaction(Transaction transaction);
+        Task<Transaction> InsertTransaction(string message);
     }
 }
