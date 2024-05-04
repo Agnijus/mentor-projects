@@ -30,6 +30,7 @@ namespace dotnet_phase1_app.Controllers
             try
             {
                 var Transaction = await _transactionRepository.InsertTransaction(transaction);
+                // return id with the body, use dapper
                 return CreatedAtAction(nameof(CreateTransaction), Transaction, new {statusCode = 200, text = "Got It", isSuccess = true  });
 
 

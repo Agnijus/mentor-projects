@@ -1,0 +1,8 @@
+<form class="message-form" (ngSubmit)="onSubmit(message.value)">
+  <mat-form-field class="form-full-width">
+    <mat-label>Message *</mat-label>
+    <input matInput #message maxlength="50" />
+    <mat-hint align="end">{{ message.value.length }} / 50</mat-hint>
+  </mat-form-field>
+  <button class="btn" mat-flat-button color="primary">Save to DB</button>
+</form>
