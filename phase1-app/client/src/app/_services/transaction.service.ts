@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -9,28 +10,8 @@ export class TransactionService {
 
   constructor(private http: HttpClient) {}
 
-  sendTransaction(message: string) {
+  sendTransaction(message: string): Observable<any> {
     const params = new HttpParams().set('message', message);
-
-    this.http.get(this.baseUrl + '/transaction', { params }).subscribe({
-      next: (response) => {
-        const res = response as Response;
-
-        if (res.statusCode == 200) {
-          console.log(res);
-          // form.reset();
-        }
-      },
-      error: (error) => console.log(error.message),
-    });
+    return this.http.get(this.baseUrl + '/transaction', { params });
   }
-}
-
-interface Response {
-  id: number;
-  message: string;
-  date: Date;
-  isSuccess: boolean;
-  statusCode: number;
-  text: string;
 }

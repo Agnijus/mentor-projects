@@ -1,13 +1,45 @@
-.message-form {
-  border-radius: 0.5rem;
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-  padding: 15rem 2.5rem;
+.form-parent {
+  padding: 0 2rem;
   background-color: white;
+  border-radius: 1rem;
+  width: 400px;
+  height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-container {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.notification-message {
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 1rem;
+  color: #333;
+}
+.red {
+  background-color: #ffcccc;
+  color: #993333;
+}
+.green {
+  background-color: #ccffcc;
+  color: #256029;
+}
+
+.message-form {
+  width: 100%;
 }
 .message form input {
   background-color: #f1f5f9;
+  margin-bottom: 1rem;
 }
 
 .form-full-width {
