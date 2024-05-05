@@ -1,7 +1,7 @@
 .form-parent {
   padding: 0 2rem;
   background-color: white;
-  border-radius: 1rem;
+  border-radius: 0.75rem;
   width: 450px;
   height: 600px;
   position: relative;
@@ -41,10 +41,6 @@
 }
 .message-form {
   width: 100%;
-}
-.message form input {
-  background-color: #f1f5f9;
-  margin-bottom: 1rem;
 }
 
 .form-full-width {

@@ -1,29 +1,8 @@
 .main {
+  background-color: #3f51b59a;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #f1f5f9;
-}
-
-.message-form {
-  border-radius: 0.5rem;
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-  padding: 15rem 2.5rem;
-  background-color: white;
-}
-.message form input {
-  background-color: #f1f5f9;
-}
-
-.form-full-width {
-  width: 100%;
-}
-
-.btn {
-  margin-top: 1rem;
-  width: 100%;
 }
