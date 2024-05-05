@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "RE5EHhaKvi5kzMQfeScHAT234HbTkHozUjBDlUWebQVvKdN1XRWre1G4YwXnMeKTTbPkMELHpyqb46ZLPWOkkQ==",
+  "dgSpecHash": "+MRCcSAk8uFzxhb3mdrF9V0V8TB1AXAC7ZR/U2LrWe1HseDXILDszeEXijTvO2B3O8Q4ESRKQn3k53eplhQPVg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Agnijus\\OneDrive\\Documents\\WebDevProjects\\arrivia-mentorship-projects\\phase1-app\\server\\dotnet-phase1-app.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Agnijus\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Agnijus\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\Agnijus\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\Agnijus\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.4\\microsoft.aspnetcore.openapi.8.0.4.nupkg.sha512",
     "C:\\Users\\Agnijus\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Agnijus\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
