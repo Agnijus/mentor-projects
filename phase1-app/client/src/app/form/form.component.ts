@@ -38,26 +38,27 @@ export class FormComponent {
       this.transactionService.sendTransaction(this.inputText).subscribe({
         next: (res: Response) => {
           console.log(res);
+
           this.isLoading = false;
           this.resetForm();
           this.response = res;
-          this.notification = 'The message has been saved';
-          setTimeout(() => (this.notification = null), 3000);
+          this.displayNotification('The message has been saved');
         },
         error: (error) => {
           console.log(error);
+
           this.isLoading = false;
-          this.notification = 'Failed to save the message';
-          setTimeout(() => (this.notification = null), 3000);
+          this.displayNotification('Failed to save the message');
         },
-        // complete: () => {
-        //   this.isLoading = false;
-        // },
       });
     }
   }
   resetForm(): void {
     this.inputText = '';
+  }
+  displayNotification(notification: string): void {
+    this.notification = notification;
+    setTimeout(() => (this.notification = null), 3000);
   }
 }
 
