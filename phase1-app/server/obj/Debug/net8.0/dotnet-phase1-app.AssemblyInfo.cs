@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dotnet-phase1-app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a45b79618558176774d7d35f9fbcddcf681c01ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9e54e463017ad525d03c2825270b465173f2bfa")]
 [assembly: System.Reflection.AssemblyProductAttribute("dotnet-phase1-app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dotnet-phase1-app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

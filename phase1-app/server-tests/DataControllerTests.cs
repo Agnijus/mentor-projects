@@ -13,7 +13,7 @@ namespace server_tests
     {
         
         [Fact]
-        public void CreateTransaction_MessageInput_MustReturnTransaction()
+        public void CreateTransaction_MessageInput_MustReturnNotNull()
         {
             // Arrange
             DataController dataController = new DataController(new TransactionRepositoryTest());
@@ -27,13 +27,13 @@ namespace server_tests
         }
 
         [Fact]
-        public void CreateTransaction_EmptyMessage_ThrowsAnException()
+        public void CreateTransaction_EmptyMessage_ThrowsAnArgumentException()
         {
             // Arrange
             DataController dataController = new DataController(new TransactionRepositoryTest());
 
             // Act & Assert
-            Assert.ThrowsAsync<Exception>(() => dataController.CreateTransaction(""));
+            Assert.ThrowsAsync<ArgumentException>(() => dataController.CreateTransaction(""));
 
         }
 
