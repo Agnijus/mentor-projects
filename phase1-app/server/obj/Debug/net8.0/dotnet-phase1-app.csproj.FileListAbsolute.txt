@@ -147,3 +147,4 @@ C:\Users\Agnijus\OneDrive\Documents\WebDevProjects\arrivia-mentorship-projects\p
 C:\Users\Agnijus\OneDrive\Documents\WebDevProjects\arrivia-mentorship-projects\phase1-app\server\obj\Debug\net8.0\dotnet-phase1-app.pdb
 C:\Users\Agnijus\OneDrive\Documents\WebDevProjects\arrivia-mentorship-projects\phase1-app\server\obj\Debug\net8.0\dotnet-phase1-app.genruntimeconfig.cache
 C:\Users\Agnijus\OneDrive\Documents\WebDevProjects\arrivia-mentorship-projects\phase1-app\server\obj\Debug\net8.0\ref\dotnet-phase1-app.dll
+C:\Users\Agnijus\OneDrive\Documents\WebDevProjects\arrivia-mentorship-projects\phase1-app\server\bin\Debug\net8.0\Dapper.dll

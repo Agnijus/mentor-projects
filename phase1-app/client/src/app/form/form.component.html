@@ -1,0 +1,31 @@
+<div class="form-parent">
+  <div class="notification-container">
+    <!-- loading -->
+    <mat-spinner class="loading" *ngIf="isLoading" diameter="50"></mat-spinner>
+
+    <!-- notification -->
+    <div
+      *ngIf="notification"
+      class="notification-message"
+      [ngClass]="response?.isSuccess && !isLoading ? 'green' : 'red'"
+    >
+      {{ notification }}
+    </div>
+  </div>
+
+  <!-- form -->
+  <form class="message-form" (ngSubmit)="onSubmit()">
+    <mat-form-field class="form-full-width">
+      <mat-label>Message *</mat-label>
+      <input
+        [(ngModel)]="inputText"
+        name="message"
+        matInput
+        #message="ngModel"
+        maxlength="50"
+      />
+      <mat-hint align="end">{{ inputText.length }} / 50</mat-hint>
+    </mat-form-field>
+    <button class="btn" mat-flat-button color="primary">Save to DB</button>
+  </form>
+</div>

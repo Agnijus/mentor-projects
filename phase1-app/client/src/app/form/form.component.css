@@ -1,0 +1,53 @@
+.form-parent {
+  padding: 0 2rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  width: 450px;
+  height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-container {
+  flex-direction: column;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.notification-message {
+  border-radius: 0.75rem;
+  text-align: center;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #333;
+  width: 275px;
+}
+.red {
+  background-color: #ffcccc;
+  color: #993333;
+}
+.green {
+  background-color: #ccffcc;
+  color: #256029;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+}
+.message-form {
+  width: 100%;
+}
+
+.form-full-width {
+  width: 100%;
+}
+
+.btn {
+  margin-top: 1rem;
+  width: 100%;
+}

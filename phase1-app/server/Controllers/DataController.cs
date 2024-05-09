@@ -2,6 +2,7 @@
 //using Microsoft.Data.SqlClient;
 using dotnet_phase1_app.Models;
 using dotnet_phase1_app.Repositories;
+using System.Transactions;
 
 
 namespace dotnet_phase1_app.Controllers
@@ -11,7 +12,6 @@ namespace dotnet_phase1_app.Controllers
     [ApiController]
     public class DataController : ControllerBase
     {
-        //private readonly IConfiguration _configuration;
         private readonly ITransactionRepository _transactionRepository; 
 
 
@@ -20,19 +20,19 @@ namespace dotnet_phase1_app.Controllers
             _transactionRepository = transactionRepository;
         }
 
-        [HttpPost]
-        public async Task<ActionResult<Transaction>> CreateTransaction([FromBody] Transaction transaction)
+        [HttpGet]
+        public async Task<IActionResult> CreateTransaction([FromQuery] string message)
         {
-            if (transaction == null) {
-                return BadRequest("No data present");
+            if (string.IsNullOrEmpty(message))
+            {
+                throw new ArgumentException("Message parameter is required.");
             }
 
             try
             {
-                var Transaction = await _transactionRepository.InsertTransaction(transaction);
-                return CreatedAtAction(nameof(CreateTransaction), Transaction, new {statusCode = 200, text = "Got It", isSuccess = true  });
-
-
+                var Transaction = await _transactionRepository.InsertTransaction(message);
+                Console.WriteLine(Transaction);
+                return Ok(new { Id = Transaction.Id, Message = Transaction.Message, Date = Transaction.Date, isSuccess = true, StatusCode = 200, Text = "Got It" });
             }
             catch(Exception ex)
             {
