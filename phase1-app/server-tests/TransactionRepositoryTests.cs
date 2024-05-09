@@ -8,10 +8,11 @@ using dotnet_phase1_app.Repositories;
 
 namespace server_tests
 {
-    public class TransactionRepositoryTest : ITransactionRepository
+    internal class TransactionRepositoryTest : ITransactionRepository
     {
         public List<Transaction> transactions = new List<Transaction>();
         private int IdCount = 1;
+
         public Task<Transaction> InsertTransaction(string message)
         {
             var transaction = new Transaction
