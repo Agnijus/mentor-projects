@@ -10,7 +10,7 @@ namespace server_tests
 {
     public class TransactionRepositoryTest : ITransactionRepository
     {
-        private List<Transaction> transactions = new List<Transaction>();
+        public List<Transaction> transactions = new List<Transaction>();
         private int IdCount = 1;
         public Task<Transaction> InsertTransaction(string message)
         {
